@@ -1,0 +1,33 @@
+:root {
+
+    --primary: #ff6b35;
+    --primary-dark: #e85a2a;
+
+    --secondary: #0f172a;
+
+    --accent: #22c55e;
+
+    --white: #ffffff;
+
+    --text: #334155;
+
+    --text-light: #64748b;
+
+    --border: #e2e8f0;
+
+    --bg: #f8fafc;
+
+    --shadow:
+        0 10px 30px rgba(0,0,0,0.08);
+
+    --transition: all .3s ease;
+
+    --radius: 14px;
+}
+.container {
+    max-width:1400px;
+
+    margin:0 auto;
+
+    padding:0 2rem;
+}

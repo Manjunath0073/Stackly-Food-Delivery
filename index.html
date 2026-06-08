@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Delivery</title>
+    <link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="assets/css/style.css">
+
+    <link rel="stylesheet"
+        href="assets/css/header.css">
+    <link rel="stylesheet"
+        href="assets/css/home.css">
+</head>
+<div class="menu-overlay"></div>
+<body>
+    <!-- HEADER START -->
+    <header class="header">
+
+        <nav class="navbar container">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-stackly.webp" alt="StacklyBite Logo">
+            </a>
+            <div class="mobile-menu">
+
+                <button class="close-menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <!-- Navigation Menu -->
+                <ul class="nav-menu">
+
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="restaurants.html" class="nav-link">Restaurants</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="menu.html" class="nav-link">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="offers.html" class="nav-link">Offers</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+
+                </ul>
+
+                <div class="nav-actions">
+
+                    <a href="#" class="action-icon">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <span>Search</span>
+
+                    </a>
+
+                    <a href="cart.html" class="action-icon cart-icon">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        <span>Cart</span>
+
+                        <small class="cart-count">2</small>
+
+                    </a>
+
+                </div>
+
+                <div class="auth-buttons">
+
+                    <a href="login.html" class="btn btn-login">
+                        Login
+                    </a>
+
+                    <a href="signup.html" class="btn btn-signup">
+                        Sign Up
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="hamburger">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+        </nav>
+
+    </header>
+    <!-- ======================
+        HERO SECTION
+    ====================== -->
+
+    <section class="hero">
+
+        <div class="container hero__container">
+
+            <!-- Left Content -->
+
+            <div class="hero__content">
+
+                <span class="hero__badge">
+
+                    🔥 Fastest Growing Food Delivery Platform
+
+                </span>
+
+                <h1 class="hero__title">
+
+                    Fresh Food
+
+                    <span>Delivered</span>
+
+                    To Your Door
+
+                    In Minutes
+
+                </h1>
+
+                <p class="hero__description">
+
+                    Discover top-rated restaurants, exclusive offers
+                    and lightning-fast delivery all in one place.
+
+                </p>
+
+                <!-- Search -->
+
+                <form class="hero__search">
+
+                    <input
+                        type="text"
+                        placeholder="Search restaurants, dishes, cuisines..."
+                    >
+
+                    <button type="submit">
+
+                        Search
+
+                    </button>
+
+                </form>
+
+                <!-- CTA Buttons -->
+
+                <div class="hero__buttons">
+
+                    <a href="#" class="btn btn-primary">
+
+                        Order Now
+
+                    </a>
+
+                    <a href="#" class="btn btn-secondary">
+
+                        Explore Menu
+
+                    </a>
+
+                </div>
+
+                <!-- Stats -->
+
+                <div class="hero__stats">
+
+                    <div class="stat-card">
+
+                        <h3 class="counter"
+                        data-target="50000">
+                        0 
+                        </h3>
+
+                        <p>Customers</p>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <h3 class="counter"
+                        data-target="1000">
+                        0
+                        </h3>
+
+                        <p>Restaurants</p>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <h3 class="counter"
+                        data-target="49">
+                        0
+                        </h3>
+
+                        <p>Rating</p>
+
+                    </div>
+
+                </div>
+
+                <!-- Trust Strip -->
+
+                <div class="hero__trust">
+
+                    <p>
+
+                        Trusted by customers in
+
+                        <strong>
+                            Coimbatore • Chennai • Bangalore • Hyderabad
+                        </strong>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Right Visual -->
+
+            <div class="hero__visual">
+                <div class="orbit orbit-1"></div>
+                <div class="orbit orbit-2"></div>
+                <!-- Center Circle -->
+
+                <div class="hero__center-logo">
+
+                    <div class="center-logo-icon">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+
+                    <h3>
+                        Stackly<span>Bite</span>
+                    </h3>
+
+                </div>
+
+                <!-- Food Images -->
+                 <div class="food-orbit">
+
+                    <div class="food food--1">
+
+                        <img
+                            src="assets/images/hero/ivan-torres-MQUqbmszGGM-unsplash_11zon_11zon.webp"
+                            alt="Pizza"
+                        >
+
+                    </div>
+
+                    <div class="food food--2">
+
+                        <img
+                            src="assets/images/hero/david-foodphototasty-E94j3rMcxlw-unsplash_11zon.webp"
+                            alt="Burger"
+                        >
+
+                    </div>
+
+                    <div class="food food--3">
+
+                        <img
+                            src="assets/images/hero/anil-sharma-seJrQGuPJKw-unsplash_11zon_11zon.webp"
+                            alt="Biryani"
+                        >
+
+                    </div>
+
+                    <div class="food food--4">
+
+                        <img
+                            src="assets/images/hero/jacob-thomas-6jHpcBPw7i8-unsplash_11zon_11zon.webp"
+                            alt="Dessert"
+                        >
+
+                    </div>
+
+                    <div class="food food--5">
+
+                        <img
+                            src="assets/images/hero/lindsay-moe-UP5jWpuIvZI-unsplash_11zon_11zon.webp"
+                            alt="Noodles"
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Floating Cards -->
+
+                <div class="floating-card rating-card">
+
+                    ⭐ 4.9 Rating
+
+                </div>
+
+                <div class="floating-card delivery-card">
+
+                    🚚 20 Min Delivery
+
+                </div>
+
+                <div class="floating-card offer-card">
+
+                    🔥 Up To 50% OFF
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+<!-- ======================
+     WHY CHOOSE US
+====================== -->
+
+    <section class="features">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="hero__badge">
+                    Why Choose Us
+                </span>
+
+                <h2>
+                    Experience Food Delivery Like Never Before
+                </h2>
+
+                <p>
+                    Fast delivery, premium restaurants,
+                    exciting offers and reliable support.
+                </p>
+
+            </div>
+
+            <div class="features__grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon icon-orange">
+                        <i class="fa-solid fa-motorcycle"></i>
+                    </div>
+
+                    <h3>Fast Delivery</h3>
+
+                    <p>
+                        Lightning-fast delivery
+                        at your doorstep.
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="feature-icon icon-green">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+
+                    <h3>Best Quality</h3>
+
+                    <p>
+                        Top quality food from
+                        trusted restaurants.
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="feature-icon icon-red">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+
+                    <h3>Exclusive Offers</h3>
+
+                    <p>
+                        Enjoy exciting discounts
+                        and daily deals.
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="feature-icon icon-purple">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <h3>24/7 Support</h3>
+
+                    <p>
+                        Dedicated support
+                        whenever you need help.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="categories">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-badge">
+
+                    Popular Categories
+
+                </span>
+
+                <h2>
+
+                    Explore Food By Category
+
+                </h2>
+
+                <p>
+
+                    Discover delicious meals from
+                    top-rated restaurants near you.
+
+                </p>
+
+            </div>
+
+            <div class="categories__grid">
+
+                <div class="category-card category-orange">
+
+                    <img src="assets/images/categories/pizza.png"
+                        alt="Pizza">
+
+                    <h3>Pizza</h3>
+
+                    <span>120+ Items</span>
+
+                </div>
+
+                <div class="category-card category-yellow">
+
+                    <img src="assets/images/categories/burger.png"
+                        alt="Burger">
+
+                    <h3>Burger</h3>
+
+                    <span>85+ Items</span>
+
+                </div>
+
+                <div class="category-card category-red">
+
+                    <img src="assets/images/categories/biryani.png"
+                        alt="Biryani">
+
+                    <h3>Biryani</h3>
+
+                    <span>100+ Items</span>
+
+                </div>
+
+                <div class="category-card category-green">
+
+                    <img src="assets/images/categories/south-indian.png"
+                        alt="South Indian">
+
+                    <h3>South Indian</h3>
+
+                    <span>70+ Items</span>
+
+                </div>
+
+                <div class="category-card category-blue">
+
+                    <img src="assets/images/categories/noodles.png"
+                        alt="Noodles">
+
+                    <h3>Noodles</h3>
+
+                    <span>60+ Items</span>
+
+                </div>
+
+                <div class="category-card category-pink">
+
+                    <img src="assets/images/categories/dessert.png"
+                        alt="Desserts">
+
+                    <h3>Desserts</h3>
+
+                    <span>50+ Items</span>
+
+                </div>
+
+                <div class="category-card category-purple">
+
+                    <img src="assets/images/categories/drinks.png"
+                        alt="Drinks">
+
+                    <h3>Beverages</h3>
+
+                    <span>40+ Items</span>
+
+                </div>
+
+                <div class="category-card category-mint">
+
+                    <img src="assets/images/categories/healthy.png"
+                        alt="Healthy Meals">
+
+                    <h3>Healthy Meals</h3>
+
+                    <span>35+ Items</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/home.js"></script>
+</body>
+</html>
