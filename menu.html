@@ -1,0 +1,2576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Delivery</title>
+    <link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="assets/css/style.css">
+
+    <link rel="stylesheet"
+        href="assets/css/header.css">
+    <link rel="stylesheet"
+        href="assets/css/menu.css">
+</head>
+<div class="menu-overlay"></div>
+<body>
+    <!-- HEADER START -->
+    <header class="header">
+
+        <nav class="navbar container">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-stackly.webp" alt="StacklyBite Logo">
+            </a>
+            <div class="mobile-menu">
+
+                <button class="close-menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <!-- Navigation Menu -->
+                <ul class="nav-menu">
+
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="restaurants.html" class="nav-link">Restaurants</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="menu.html" class="nav-link">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="offers.html" class="nav-link">Offers</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+
+                </ul>
+
+                <div class="nav-actions">
+
+                    <a href="#" class="action-icon">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <span>Search</span>
+
+                    </a>
+
+                    <a href="cart.html" class="action-icon cart-icon">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        <span>Cart</span>
+
+                        <small class="cart-count">2</small>
+
+                    </a>
+
+                </div>
+
+                <div class="auth-buttons">
+
+                    <a href="login.html" class="btn btn-login">
+                        Login
+                    </a>
+
+                    <a href="signup.html" class="btn btn-signup">
+                        Sign Up
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="hamburger">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- ======================
+        MENU HERO
+    ====================== -->
+
+    <section class="menu-hero">
+
+        <div class="container">
+
+            <div class="menu-hero__content">
+
+                <span class="section-badge">
+
+                    Featured Restaurant
+
+                </span>
+
+                <h1>
+
+                    Burger House
+
+                </h1>
+
+                <p class="restaurant-type">
+
+                    🍔 Fast Food • Burgers • Fries
+                </p>
+
+                <div class="menu-hero__meta">
+
+                    <span>
+
+                        ⭐ 4.9 Rating
+
+                    </span>
+
+                    <span>
+
+                        🕒 25 Min
+
+                    </span>
+
+                    <span>
+
+                        📍 Chennai
+
+                    </span>
+
+                </div>
+
+                <p class="menu-hero__description">
+
+                    Enjoy freshly prepared burgers,
+                    crispy fries and refreshing drinks
+                    delivered straight to your doorstep.
+
+                </p>
+
+                <div class="menu-hero__buttons">
+
+                    <a href="#reviews"
+                    class="btn btn-secondary">
+
+                        View Reviews
+
+                    </a>
+
+                    <a href="#menu"
+                    class="btn btn-primary">
+
+                        Order Now
+
+                    </a>
+
+                </div>
+
+                <div class="hero-offer">
+
+                    <span>
+
+                        🔥 50% OFF Today
+
+                    </span>
+
+                    <strong>
+
+                        Use Code: STACK50
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <div class="menu-hero__visual">
+
+                <img src="assets/images/menu/hero-burger.png"
+                    alt="Burger">
+
+                <div class="hero-badge badge-rating">
+
+                    ⭐ 4.9
+
+                </div>
+
+                <div class="hero-badge badge-delivery">
+
+                    🚚 Fast Delivery
+
+                </div>
+
+                <div class="hero-badge badge-offer">
+
+                    🔥 50% OFF
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================
+        MENU CATEGORIES
+    ====================== -->
+
+    <section class="menu-categories">
+
+        <div class="container">
+
+            <div class="categories-wrapper">
+
+                <a href="#burgers" class="category-pill active">
+
+                    🍔 Burgers
+                        <span>(12)</span>
+                </a>
+
+                <a href="#pizza" class="category-pill">
+
+                    🍕 Pizza
+                    <span>(9)</span>
+                </a>
+
+                <a href="#sides" class="category-pill">
+
+                    🍟 Sides
+                    <span>(11)</span>
+                </a>
+
+                <a href="#drinks" class="category-pill">
+
+                    🥤 Drinks
+                    <span>(7)</span>
+                </a>
+
+                <a href="#desserts" class="category-pill">
+
+                    🍰 Desserts
+                    <span>(10)</span>
+                </a>
+
+                <a href="#wraps" class="category-pill">
+
+                    🌮 Wraps
+                    <span>(5)</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="featured-dishes">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-badge">
+
+                    Chef's Recommendations
+
+                </span>
+
+                <h2>
+
+                    Most Loved By Customers
+
+                </h2>
+
+                <p>
+
+                    Handpicked dishes that keep our
+                    customers coming back for more.
+
+                </p>
+
+            </div>
+
+            <div class="featured-dishes-grid">
+
+                <!-- Card 1 -->
+
+                <div class="featured-dish-card">
+
+                    <span class="dish-badge">
+
+                        🔥 Bestseller
+
+                    </span>
+
+                    <button class="dish-favourite">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                    <div class="featured-dish-image">
+
+                        <img src="assets/images/menu/burger-1.png"
+                            alt="Burger">
+
+                    </div>
+
+                    <div class="featured-dish-content">
+
+                        <h3>
+
+                            Ultimate Chicken Burger
+
+                        </h3>
+
+                        <p>
+
+                            Crispy chicken, cheese,
+                            lettuce and special sauce.
+
+                        </p>
+
+                        <div class="dish-meta">
+
+                            <span>⭐ 4.9</span>
+
+                            <span>1.8k Reviews</span>
+
+                        </div>
+
+                        <div class="dish-footer">
+
+                            <h4>₹249</h4>
+
+                            <button class="add-cart-btn">
+
+                                Add To Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 2 -->
+
+                <div class="featured-dish-card">
+
+                    <span class="dish-badge">
+
+                        ⭐ Top Rated
+
+                    </span>
+
+                    <button class="dish-favourite">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                    <div class="featured-dish-image">
+
+                        <img src="assets/images/menu/pizza-1.png"
+                            alt="Pizza">
+
+                    </div>
+
+                    <div class="featured-dish-content">
+
+                        <h3>
+
+                            Loaded Cheese Pizza
+
+                        </h3>
+
+                        <p>
+
+                            Rich mozzarella cheese
+                            with fresh toppings.
+
+                        </p>
+
+                        <div class="dish-meta">
+
+                            <span>⭐ 4.8</span>
+
+                            <span>1.4k Reviews</span>
+
+                        </div>
+
+                        <div class="dish-footer">
+
+                            <h4>₹399</h4>
+
+                            <button class="add-cart-btn">
+
+                                Add To Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 3 -->
+
+                <div class="featured-dish-card">
+
+                    <span class="dish-badge">
+
+                        👑 Chef Special
+
+                    </span>
+
+                    <button class="dish-favourite">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                    <div class="featured-dish-image">
+
+                        <img src="assets/images/menu/fries-1.png"
+                            alt="Fries">
+
+                    </div>
+
+                    <div class="featured-dish-content">
+
+                        <h3>
+
+                            Peri Peri Loaded Fries
+
+                        </h3>
+
+                        <p>
+
+                            Crispy fries topped with
+                            peri peri seasoning.
+
+                        </p>
+
+                        <div class="dish-meta">
+
+                            <span>⭐ 4.9</span>
+
+                            <span>900 Reviews</span>
+
+                        </div>
+
+                        <div class="dish-footer">
+
+                            <h4>₹179</h4>
+
+                            <button class="add-cart-btn">
+
+                                Add To Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="menu-section" id="burgers">
+
+        <div class="container">
+
+            <div class="menu-section-header">
+
+                <h2>
+
+                    🍔 Burgers
+
+                </h2>
+
+                <p>
+
+                    Freshly grilled burgers made with premium ingredients.
+
+                </p>
+
+            </div>
+
+            <div class="menu-grid">
+
+                <!-- Menu Item -->
+
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/burger-1.png"
+                            alt="Burger">
+
+                    </div>
+
+                    <div class="menu-item-content">
+                        <span class="menu-tag"> Bestseller </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                Chicken Burger
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹249
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Crispy chicken fillet with
+                            lettuce and cheese.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.9</span>
+
+                            <span>1.8k Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/burger-2.png"
+                            alt="Double Patty Burger">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag special">
+
+                            Chef Special
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                Double Patty Burger
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹329
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Double grilled chicken patties,
+                            cheddar cheese and signature sauce.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.8</span>
+
+                            <span>1.2k Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/burger-3.png"
+                            alt="Spicy Zinger Burger">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag bestseller">
+
+                            Bestseller
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                Spicy Zinger Burger
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹269
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Crispy spicy chicken fillet
+                            with lettuce and mayo.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.9</span>
+
+                            <span>2.1k Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/burger-4.png"
+                            alt="BBQ Chicken Burger">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag">
+
+                            Most Ordered
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                BBQ Chicken Burger
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹289
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Smoky BBQ chicken burger
+                            topped with caramelized onions.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.8</span>
+
+                            <span>1.4k Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/burger-5.png"
+                            alt="Veg Supreme Burger">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag new">
+
+                            New Launch
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                Veg Supreme Burger
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹199
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Crispy vegetable patty with
+                            fresh veggies and cheese.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.7</span>
+
+                            <span>850 Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/burger-6.png"
+                            alt="Cheese Burst Burger">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag special">
+
+                            Customer Favorite
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                Cheese Burst Burger
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹299
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Loaded with molten cheese,
+                            crispy chicken and fresh lettuce.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.9</span>
+
+                            <span>1.7k Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="menu-section" id="pizza">
+
+        <div class="container">
+
+            <div class="menu-section-header">
+
+                <h2>
+
+                    🍕 Pizza
+
+                </h2>
+
+                <p>
+
+                    Stone baked pizzas loaded with premium toppings.
+
+                </p>
+
+            </div>
+
+            <div class="menu-grid">
+
+                <!-- Card 1 -->
+
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/pizza-1.png"
+                            alt="Margherita Pizza">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag bestseller">
+
+                            Bestseller
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                Margherita Pizza
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹349
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Classic pizza topped with
+                            mozzarella cheese and basil.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.8</span>
+
+                            <span>1.5k Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 2 -->
+
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/pizza-2.png"
+                            alt="Veg Loaded Pizza">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag special">
+
+                            Chef Special
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                Veg Loaded Pizza
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹399
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Loaded with onions, capsicum,
+                            mushrooms and olives.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.9</span>
+
+                            <span>1.8k Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 3 -->
+
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/pizza-3.png"
+                            alt="Farmhouse Pizza">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag">
+
+                            Most Ordered
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                Farmhouse Pizza
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹449
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Fresh vegetables and
+                            extra cheese on a crispy crust.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.8</span>
+
+                            <span>1.3k Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 4 -->
+
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/pizza-4.png"
+                            alt="Paneer Tikka Pizza">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag new">
+
+                            New Launch
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                Paneer Tikka Pizza
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹429
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Paneer tikka chunks with
+                            spicy Indian seasonings.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.9</span>
+
+                            <span>1.1k Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 5 -->
+
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/pizza-5.png"
+                            alt="Pepperoni Pizza">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag special">
+
+                            Customer Favorite
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                Pepperoni Pizza
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹499
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Premium pepperoni slices
+                            layered over melted cheese.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.8</span>
+
+                            <span>2.0k Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 6 -->
+
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/pizza-6.png"
+                            alt="Cheese Volcano Pizza">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag bestseller">
+
+                            Bestseller
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                Cheese Volcano Pizza
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹549
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Overflowing molten cheese
+                            with extra cheesy crust.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.9</span>
+
+                            <span>2.3k Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="menu-section" id="drinks">
+
+        <div class="container">
+
+            <div class="menu-section-header">
+
+                <h2>
+
+                    🥤 Drinks
+
+                </h2>
+
+                <p>
+
+                    Refreshing beverages crafted to perfectly complement your meal.
+
+                </p>
+
+            </div>
+
+            <div class="menu-grid">
+
+                <!-- Card 1 -->
+
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/drink-1.png"
+                            alt="Coca Cola">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag bestseller">
+
+                            Bestseller
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                Coca Cola
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹79
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Ice cold Coca Cola served
+                            chilled for maximum refreshment.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.7</span>
+
+                            <span>1.2k Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 2 -->
+
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/drink-2.png"
+                            alt="Pepsi">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag">
+
+                            Most Ordered
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                Pepsi
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹79
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Crisp and refreshing cola
+                            perfect with burgers and pizza.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.7</span>
+
+                            <span>950 Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 3 -->
+
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/drink-3.png"
+                            alt="Fresh Lime">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag new">
+
+                            Fresh Choice
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                Fresh Lime
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹99
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Freshly squeezed lime juice
+                            with a refreshing citrus kick.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.8</span>
+
+                            <span>820 Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 4 -->
+
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/drink-4.png"
+                            alt="Cold Coffee">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag special">
+
+                            Chef Special
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                Cold Coffee
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹149
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Rich coffee blended with milk
+                            and topped with creamy foam.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.9</span>
+
+                            <span>1.5k Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 5 -->
+
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/drink-5.png"
+                            alt="Chocolate Shake">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag special">
+
+                            Customer Favorite
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                Chocolate Shake
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹179
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Thick chocolate milkshake
+                            loaded with chocolate goodness.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.8</span>
+
+                            <span>1.3k Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 6 -->
+
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/drink-6.png"
+                            alt="Mango Smoothie">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag bestseller">
+
+                            Bestseller
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                Mango Smoothie
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹189
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Fresh mango blended into
+                            a smooth and creamy delight.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.9</span>
+
+                            <span>1.7k Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="menu-section" id="desserts">
+
+        <div class="container">
+
+            <div class="menu-section-header">
+
+                <h2>
+
+                    🍰 Desserts
+
+                </h2>
+
+                <p>
+
+                    Sweet treats crafted to make every meal memorable.
+
+                </p>
+
+            </div>
+
+            <div class="menu-grid">
+
+                <!-- Card 1 -->
+
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/dessert-1.png"
+                            alt="Chocolate Cake">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag bestseller">
+
+                            Bestseller
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                Chocolate Cake
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹199
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Rich chocolate sponge layered
+                            with smooth chocolate cream.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.9</span>
+
+                            <span>1.9k Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 2 -->
+
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/dessert-2.png"
+                            alt="Brownie">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag">
+
+                            Most Ordered
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                Fudge Brownie
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹149
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Soft chocolate brownie
+                            with gooey chocolate center.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.8</span>
+
+                            <span>1.4k Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 3 -->
+
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/dessert-3.png"
+                            alt="Ice Cream Sundae">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag special">
+
+                            Chef Special
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                Ice Cream Sundae
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹179
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Vanilla ice cream topped
+                            with chocolate syrup and nuts.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.8</span>
+
+                            <span>1.2k Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 4 -->
+
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/dessert-4.png"
+                            alt="Cheesecake">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag special">
+
+                            Customer Favorite
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                New York Cheesecake
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹249
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Creamy cheesecake with
+                            buttery biscuit crust.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.9</span>
+
+                            <span>1.6k Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 5 -->
+
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/dessert-5.png"
+                            alt="Red Velvet Cake">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag new">
+
+                            New Launch
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                Red Velvet Cake
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹229
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            Moist red velvet sponge
+                            with cream cheese frosting.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.9</span>
+
+                            <span>980 Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 6 -->
+
+                <div class="menu-item-card">
+
+                    <div class="menu-item-image">
+
+                        <img src="assets/images/menu/dessert-6.png"
+                            alt="Donut Box">
+
+                    </div>
+
+                    <div class="menu-item-content">
+
+                        <span class="menu-tag bestseller">
+
+                            Bestseller
+
+                        </span>
+
+                        <div class="menu-item-top">
+
+                            <h3>
+
+                                Assorted Donut Box
+
+                            </h3>
+
+                            <span class="menu-price">
+
+                                ₹199
+
+                            </span>
+
+                        </div>
+
+                        <p>
+
+                            A box of colorful donuts
+                            with assorted flavors.
+
+                        </p>
+
+                        <div class="menu-item-meta">
+
+                            <span>⭐ 4.7</span>
+
+                            <span>1.1k Reviews</span>
+
+                        </div>
+
+                        <button class="menu-cart-btn">
+
+                            Add To Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="popular-combos">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-badge">
+
+                    Popular Combos
+
+                </span>
+
+                <h2>
+
+                    Save More With Combo Deals
+
+                </h2>
+
+                <p>
+
+                    Handpicked meal combinations
+                    loved by our customers.
+
+                </p>
+
+            </div>
+
+            <div class="combo-grid">
+
+                <!-- Combo 1 -->
+
+                <div class="combo-card">
+
+                    <span class="combo-badge">
+
+                        Save ₹120
+
+                    </span>
+
+                    <div class="combo-images">
+
+                        <img src="assets/images/menu/burger-1.png">
+                        <img src="assets/images/menu/fries-1.png">
+                        <img src="assets/images/menu/drink-1.png">
+
+                    </div>
+
+                    <div class="combo-content">
+
+                        <h3>
+
+                            Burger Combo
+
+                        </h3>
+
+                        <p>
+
+                            Chicken Burger + Fries + Coke
+
+                        </p>
+
+                        <div class="combo-price">
+
+                            <span class="old-price">
+
+                                ₹519
+
+                            </span>
+
+                            <span class="new-price">
+
+                                ₹399
+
+                            </span>
+
+                        </div>
+
+                        <button class="combo-btn">
+
+                            Add Combo
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Combo 2 -->
+
+                <div class="combo-card">
+
+                    <span class="combo-badge">
+
+                        Save ₹150
+
+                    </span>
+
+                    <div class="combo-images">
+
+                        <img src="assets/images/menu/pizza-1.png">
+                        <img src="assets/images/menu/drink-2.png">
+                        <img src="assets/images/menu/dessert-1.png">
+
+                    </div>
+
+                    <div class="combo-content">
+
+                        <h3>
+
+                            Pizza Party Combo
+
+                        </h3>
+
+                        <p>
+
+                            Pizza + Soft Drink + Dessert
+
+                        </p>
+
+                        <div class="combo-price">
+
+                            <span class="old-price">
+
+                                ₹699
+
+                            </span>
+
+                            <span class="new-price">
+
+                                ₹549
+
+                            </span>
+
+                        </div>
+
+                        <button class="combo-btn">
+
+                            Add Combo
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Combo 3 -->
+
+                <div class="combo-card">
+
+                    <span class="combo-badge">
+
+                        Save ₹250
+
+                    </span>
+
+                    <div class="combo-images">
+
+                        <img src="assets/images/menu/burger-2.png">
+                        <img src="assets/images/menu/pizza-3.png">
+                        <img src="assets/images/menu/drink-5.png">
+
+                    </div>
+
+                    <div class="combo-content">
+
+                        <h3>
+
+                            Family Feast
+
+                        </h3>
+
+                        <p>
+
+                            Burger + Pizza + Shake
+
+                        </p>
+
+                        <div class="combo-price">
+
+                            <span class="old-price">
+
+                                ₹999
+
+                            </span>
+
+                            <span class="new-price">
+
+                                ₹749
+
+                            </span>
+
+                        </div>
+
+                        <button class="combo-btn">
+
+                            Add Combo
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="customer-reviews" id="reviews">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-badge">
+
+                    Customer Reviews
+
+                </span>
+
+                <h2>
+
+                    What Food Lovers Say
+
+                </h2>
+
+                <p>
+
+                    Real experiences from our happy customers.
+
+                </p>
+
+            </div>
+
+            <div class="reviews-grid">
+
+                <!-- Review 1 -->
+
+                <div class="review-card">
+
+                    <div class="review-stars">
+
+                        ⭐⭐⭐⭐⭐
+
+                    </div>
+
+                    <p class="review-text">
+
+                        Amazing burgers and quick delivery.
+                        Food arrived hot and fresh.
+
+                    </p>
+
+                    <div class="review-user">
+
+                        <img src="assets/images/reviews/user-1.jpg"
+                            alt="User">
+
+                        <div>
+
+                            <h4>
+
+                                Rahul Sharma
+
+                            </h4>
+
+                            <span>
+
+                                Verified Customer
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Review 2 -->
+
+                <div class="review-card">
+
+                    <div class="review-stars">
+
+                        ⭐⭐⭐⭐⭐
+
+                    </div>
+
+                    <p class="review-text">
+
+                        Loved the pizza combo.
+                        Great taste and value.
+
+                    </p>
+
+                    <div class="review-user">
+
+                        <img src="assets/images/reviews/user-2.jpg"
+                            alt="User">
+
+                        <div>
+
+                            <h4>
+
+                                Priya Nair
+
+                            </h4>
+
+                            <span>
+
+                                Verified Customer
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Review 3 -->
+
+                <div class="review-card">
+
+                    <div class="review-stars">
+
+                        ⭐⭐⭐⭐⭐
+
+                    </div>
+
+                    <p class="review-text">
+
+                        Excellent service and
+                        premium food quality.
+
+                    </p>
+
+                    <div class="review-user">
+
+                        <img src="assets/images/reviews/user-3.jpg"
+                            alt="User">
+
+                        <div>
+
+                            <h4>
+
+                                Arjun Kumar
+
+                            </h4>
+
+                            <span>
+
+                                Verified Customer
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <!-- Newsletter CTA -->
+
+            <div class="footer-cta">
+
+                <div class="footer-cta-content">
+
+                    <h2>
+
+                        Get Exclusive Deals Delivered
+
+                    </h2>
+
+                    <p>
+
+                        Subscribe and receive special offers,
+                        discounts and food updates.
+
+                    </p>
+
+                </div>
+
+                <form class="footer-subscribe">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email">
+
+                    <button type="submit">
+
+                        Subscribe
+
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- Footer Main -->
+
+            <div class="footer-main">
+
+                <!-- Column 1 -->
+
+                <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo-stackly.webp" alt="StacklyBite Logo">
+                </a>
+
+                    <p>
+
+                        Delivering happiness through
+                        delicious food and exceptional service.
+
+                    </p>
+
+                    <div class="footer-socials">
+
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Column 2 -->
+
+                <div class="footer-links">
+
+                    <h4>
+
+                        Quick Links
+
+                    </h4>
+
+                    <a href="index.html">Home</a>
+                    <a href="restaurants.html">Restaurants</a>
+                    <a href="categories.html">Categories</a>
+                    <a href="offers.html">Offers</a>
+
+                </div>
+
+                <!-- Column 3 -->
+
+                <div class="footer-links">
+
+                    <h4>
+
+                        Support
+
+                    </h4>
+
+                    <a href="#">Help Center</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+
+                </div>
+
+                <!-- Column 4 -->
+
+                <div class="footer-links">
+
+                    <h4>
+
+                        Contact Us
+
+                    </h4>
+
+                    <p>
+
+                        📞 +91 98765 43210
+
+                    </p>
+
+                    <p>
+
+                        ✉ support@stacklybite.com
+
+                    </p>
+
+                    <p>
+
+                        📍 Chennai, Tamil Nadu
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+
+            <div class="footer-bottom">
+
+                <p>
+
+                    © 2026 StacklyBite.
+                    All Rights Reserved.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/menu.js"></script>
+</body>
+</html>
