@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Delivery</title>
+    <link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="assets/css/style.css">
+
+    <link rel="stylesheet"
+        href="assets/css/header.css">
+    <link rel="stylesheet"
+        href="assets/css/customer.css">
+</head>
+
+<body>
+    <div class="sidebar-overlay"></div>
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+
+            <a href="index.html" class="logo sidebar-logo">
+                <img src="assets/images/logo-stackly.webp" alt="StacklyBite Logo">
+            </a>
+
+            <ul class="sidebar-menu">
+
+                <li class="menu-item active"
+                    data-page="dashboard">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    Dashboard
+
+                </li>
+
+                <li class="menu-item"
+                    data-page="orders">
+
+                    <i class="fa-solid fa-box"></i>
+
+                    My Orders
+
+                </li>
+
+                <li class="menu-item"
+                    data-page="rewards">
+
+                    <i class="fa-solid fa-gift"></i>
+
+                    Rewards
+
+                </li>
+
+                <li class="menu-item"
+                    data-page="settings">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    Settings
+
+                </li>
+
+            </ul>
+
+            <button id="logoutBtn" onclick="">
+
+                Logout
+
+            </button>
+
+        </aside>
+
+        <!-- Main -->
+
+        <main class="dashboard-main">
+
+            <header class="dashboard-header">
+
+                <div class="header-left">
+
+                    <button class="menu-toggle">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+                    <div>
+
+                        <h2>
+
+                            Welcome,
+
+                            <span id="userName"></span>
+
+                        </h2>
+
+                        <p>
+
+                            Customer Dashboard
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="profile-box">
+
+                    <h4 id="userRole"></h4>
+
+                </div>
+
+            </header>
+            <section id="contentArea">
+
+                <div id="dashboardPage"
+                    class="page-content active-page">
+
+                    <div class="dashboard-home content-page">
+
+                        <!-- KPI Cards -->
+
+                        <div class="stats-grid">
+
+                            <div class="stat-card">
+
+                                <div class="stat-icon">
+
+                                    <i class="fa-solid fa-bag-shopping"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h3 class="counter"
+                                        data-target="24">
+
+                                        0
+
+                                    </h3>
+
+                                    <p>Total Orders</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="stat-card">
+
+                                <div class="stat-icon">
+
+                                    <i class="fa-solid fa-truck"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h3 class="counter"
+                                        data-target="3">
+
+                                        0
+
+                                    </h3>
+
+                                    <p>Active Orders</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="stat-card">
+
+                                <div class="stat-icon">
+
+                                    <i class="fa-solid fa-circle-check"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h3 class="counter"
+                                        data-target="21">
+
+                                        0
+
+                                    </h3>
+
+                                    <p>Delivered Orders</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="stat-card">
+
+                                <div class="stat-icon">
+
+                                    <i class="fa-solid fa-gift"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h3 class="counter"
+                                        data-target="1250">
+
+                                        0
+
+                                    </h3>
+
+                                    <p>Reward Points</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Chart + Activity -->
+
+                        <div class="dashboard-grid">
+
+                            <div class="chart-card">
+
+                                <div class="card-header">
+
+                                    <h3>
+
+                                        Orders Overview
+
+                                    </h3>
+
+                                </div>
+
+                                <div class="chart-wrapper">
+
+                                    <canvas id="ordersChart">
+
+                                    </canvas>
+
+                                </div>
+
+                            </div>
+
+                            <div class="activity-card">
+
+                                <div class="card-header">
+
+                                    <h3>
+
+                                        Recent Activity
+
+                                    </h3>
+
+                                </div>
+
+                                <ul>
+
+                                    <li>🍔 Order #SB1024 Delivered</li>
+
+                                    <li>🎁 Earned 100 Reward Points</li>
+
+                                    <li>🍕 Order #SB1025 Preparing</li>
+
+                                    <li>💸 Coupon Applied Successfully</li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Recent Orders -->
+
+                        <div class="orders-card">
+
+                            <div class="card-header">
+
+                                <h3>
+
+                                    Recent Orders
+
+                                </h3>
+
+                            </div>
+
+                            <table class="orders-table">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>ID</th>
+
+                                        <th>Restaurant</th>
+
+                                        <th>Status</th>
+
+                                        <th>Amount</th>
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+
+                                        <td>#SB1024</td>
+
+                                        <td>Burger House</td>
+
+                                        <td>
+
+                                            <span class="status delivered">
+
+                                                Delivered
+
+                                            </span>
+
+                                        </td>
+
+                                        <td>₹349</td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>#SB1025</td>
+
+                                        <td>Pizza Corner</td>
+
+                                        <td>
+
+                                            <span class="status preparing">
+
+                                                Preparing
+
+                                            </span>
+
+                                        </td>
+
+                                        <td>₹599</td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>#SB1026</td>
+
+                                        <td>South Spice</td>
+
+                                        <td>
+
+                                            <span class="status delivered">
+
+                                                Delivered
+
+                                            </span>
+
+                                        </td>
+
+                                        <td>₹420</td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id="ordersPage"
+                    class="page-content">
+
+                    <div class="orders-filter">
+
+                        <button class="filter-btn active">
+
+                            All Orders
+
+                        </button>
+
+                        <button class="filter-btn">
+
+                            Delivered
+
+                        </button>
+
+                        <button class="filter-btn">
+
+                            Preparing
+
+                        </button>
+
+                        <button class="filter-btn">
+
+                            Cancelled
+
+                        </button>
+
+                    </div>
+                    <div class="orders-summary">
+
+                        <div class="summary-card">
+
+                            <h3>24</h3>
+
+                            <p>Total Orders</p>
+
+                        </div>
+
+                        <div class="summary-card">
+
+                            <h3>₹12,450</h3>
+
+                            <p>Total Spent</p>
+
+                        </div>
+
+                        <div class="summary-card">
+
+                            <h3>4</h3>
+
+                            <p>Active Orders</p>
+
+                        </div>
+
+                    </div>
+                    
+                    <div class="orders-grid">
+
+                        <!-- Card 1 -->
+
+                        <div class="order-card">
+
+                            <img
+                                src="assets/images/burger.jpg"
+                                alt="Burger">
+
+                            <div class="order-content">
+
+                                <div class="order-top">
+
+                                    <h3>
+
+                                        Burger House
+
+                                    </h3>
+
+                                    <span class="status delivered">
+
+                                        Delivered
+
+                                    </span>
+
+                                </div>
+
+                                <p>
+
+                                    Double Cheese Burger × 2
+
+                                </p>
+
+                                <div class="order-meta">
+
+                                    <span>
+
+                                        #SB1024
+
+                                    </span>
+
+                                    <span>
+
+                                        ₹349
+
+                                    </span>
+
+                                </div>
+
+                                <div class="order-actions">
+
+                                    <button class="btn-small">
+
+                                        Reorder
+
+                                    </button>
+
+                                    <button class="btn-outline">
+
+                                        Details
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="rewardsPage"
+                    class="page-content">
+
+                    <div class="rewards-hero">
+
+                        <div>
+
+                            <h2>
+
+                                Reward Wallet
+
+                            </h2>
+
+                            <h1>
+
+                                1,250 Points
+
+                            </h1>
+
+                            <p>
+
+                                Earn points with every order and unlock exciting rewards.
+
+                            </p>
+
+                        </div>
+
+                        <div class="tier-badge">
+
+                            Gold Member
+                        </div>
+
+                    </div>
+                    <div class="progress-card">
+
+                        <div class="progress-top">
+
+                            <span>
+
+                                Progress To Platinum
+
+                            </span>
+
+                            <span>
+
+                                1250 / 2000 Points
+
+                            </span>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div class="progress-fill">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="rewards-section">
+
+                        <h3>
+
+                            Available Coupons
+
+                        </h3>
+
+                        <div class="coupon-grid">
+
+                            <div class="coupon-card">
+
+                                <h2>₹100 OFF</h2>
+
+                                <p>Orders Above ₹499</p>
+
+                            </div>
+
+                            <div class="coupon-card">
+
+                                <h2>20% OFF</h2>
+
+                                <p>Weekend Special</p>
+
+                            </div>
+
+                            <div class="coupon-card">
+
+                                <h2>FREE DELIVERY</h2>
+
+                                <p>Unlimited Usage</p>
+
+                            </div>
+
+                            <div class="coupon-card">
+
+                                <h2>BUY 1 GET 1</h2>
+
+                                <p>Selected Restaurants</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="rewards-history">
+
+                        <h3>
+
+                            Rewards History
+
+                        </h3>
+
+                        <table class="orders-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Date</th>
+
+                                    <th>Activity</th>
+
+                                    <th>Points</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>10 Jun</td>
+
+                                    <td>Order Completed</td>
+
+                                    <td>+100</td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>08 Jun</td>
+
+                                    <td>Coupon Redeemed</td>
+
+                                    <td>-50</td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td>06 Jun</td>
+
+                                    <td>Order Completed</td>
+
+                                    <td>+75</td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                </div>
+
+                <div id="settingsPage"
+                    class="page-content">
+
+                    <div class="settings-card">
+
+                        <h3>
+
+                            Profile Information
+
+                        </h3>
+
+                        <div class="settings-grid">
+
+                            <div class="form-group">
+
+                                <label>
+
+                                    Full Name
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    value="Madan Kumar">
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>
+
+                                    Email
+
+                                </label>
+
+                                <input
+                                    type="email"
+                                    value="madan@gmail.com">
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>
+
+                                    Phone
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    value="+91 9876543210">
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>
+
+                                    Role
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    value="Customer"
+                                    disabled>
+
+                            </div>
+
+                        </div>
+
+                        <button class="btn btn-primary">
+
+                            Save Changes
+
+                        </button>
+
+                    </div>
+                    <div class="settings-card">
+
+                        <h3>
+
+                            Account Security
+
+                        </h3>
+
+                        <div class="settings-grid">
+
+                            <div class="form-group">
+
+                                <label>
+
+                                    New Password
+
+                                </label>
+
+                                <input
+                                    type="password"
+                                    placeholder="Enter New Password">
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>
+
+                                    Confirm Password
+
+                                </label>
+
+                                <input
+                                    type="password"
+                                    placeholder="Confirm Password">
+
+                            </div>
+
+                        </div>
+
+                        <button class="btn btn-primary">
+
+                            Update Password
+
+                        </button>
+
+                    </div>
+                    <div class="settings-card">
+
+                        <h3>
+
+                            Notification Preferences
+
+                        </h3>
+
+                        <div class="setting-item">
+
+                            <span>
+
+                                Order Updates
+
+                            </span>
+
+                            <label class="switch">
+
+                                <input type="checkbox" checked>
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+                        <div class="setting-item">
+
+                            <span>
+
+                                Promotional Offers
+
+                            </span>
+
+                            <label class="switch">
+
+                                <input type="checkbox" checked>
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+                        <div class="setting-item">
+
+                            <span>
+
+                                SMS Notifications
+
+                            </span>
+
+                            <label class="switch">
+
+                                <input type="checkbox">
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+                    <div class="settings-card">
+
+                        <h3>
+
+                            Appearance
+
+                        </h3>
+
+                        <div class="setting-item">
+
+                            <span>
+
+                                Dark Mode
+
+                            </span>
+
+                            <label class="switch">
+
+                                <input type="checkbox">
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+                    <div class="danger-card">
+
+                        <h3>
+
+                            Danger Zone
+
+                        </h3>
+
+                        <p>
+
+                            Permanently delete your account and all associated data.
+
+                        </p>
+
+                        <button class="delete-btn">
+
+                            Delete Account
+
+                        </button>
+
+                    </div>
+                </div>
+
+            </section>
+
+
+
+        </main>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    
+</body>
+</html>

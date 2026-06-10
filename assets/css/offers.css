@@ -272,3 +272,702 @@
     }
 
 }
+
+/* ======================
+   TRENDING DEALS
+====================== */
+
+.trending-deals{
+
+    padding:40px 0;
+
+    background:#fff;
+}
+.deals-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:2rem;
+
+    margin-top:4rem;
+}
+.deal-card{
+
+    padding:2rem;
+
+    border-radius:30px;
+
+    color:#fff;
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.4s ease;
+}
+.deal-card:hover{
+
+    transform:translateY(-10px);
+}
+.deal-discount{
+
+    font-size:2rem;
+
+    font-weight:800;
+
+    display:block;
+
+    margin-bottom:1rem;
+}
+.deal-code{
+
+    display:inline-block;
+
+    margin:1.5rem 0;
+
+    padding:.8rem 1.2rem;
+
+    border-radius:12px;
+
+    background:
+    rgba(255,255,255,.2);
+
+    font-weight:700;
+
+    letter-spacing:1px;
+}
+.deal-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+.deal-footer button{
+
+    border:none;
+
+    padding:.7rem 1.2rem;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:600;
+}
+.deal-orange{
+    background:linear-gradient(135deg,#FF6B35,#FF8A5C);
+}
+
+.deal-blue{
+    background:linear-gradient(135deg,#2563EB,#60A5FA);
+}
+
+.deal-green{
+    background:linear-gradient(135deg,#16A34A,#4ADE80);
+}
+
+.deal-purple{
+    background:linear-gradient(135deg,#7C3AED,#A78BFA);
+}
+
+.deal-red{
+    background:linear-gradient(135deg,#DC2626,#F87171);
+}
+
+.deal-dark{
+    background:linear-gradient(135deg,#0F172A,#334155);
+}
+
+@media(max-width:992px){
+
+    .deals-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+}
+@media(max-width:768px){
+
+    .deals-grid{
+
+        grid-template-columns:1fr;
+    }
+
+}
+.deal-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.15),
+        transparent
+    );
+
+    transition:.8s;
+}
+
+.deal-card:hover::before{
+
+    left:100%;
+}
+/* ======================
+   COUPON SECTION
+====================== */
+
+.coupon-section{
+
+    padding:40px 0;
+
+    background:
+    linear-gradient(
+        180deg,
+        #fff,
+        #fff8f3
+    );
+}
+.coupon-grid{
+
+    display:grid;
+
+    gap:1.5rem;
+
+    margin-top:4rem;
+}
+.coupon-box{
+
+    background:#fff;
+
+    padding:2rem;
+
+    border-radius:24px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.05);
+
+    transition:.3s ease;
+
+    border:1px dashed rgba(255,107,53,.2);
+}
+
+.coupon-box:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 20px 40px rgba(255,107,53,.08);
+}
+
+.coupon-left h3{
+
+    color:var(--primary);
+
+    font-size:1.5rem;
+
+    margin-bottom:.5rem;
+
+    letter-spacing:2px;
+}
+
+.copy-btn{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:1rem 1.5rem;
+
+    border-radius:14px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.3s ease;
+}
+
+.copy-btn:hover{
+
+    transform:translateY(-2px);
+}
+@media(max-width:768px){
+
+    .coupon-box{
+
+        flex-direction:column;
+
+        gap:1rem;
+
+        text-align:center;
+    }
+
+    .copy-btn{
+
+        width:100%;
+    }
+
+}
+
+/* ======================
+   FLASH SALE
+====================== */
+
+.flash-sale{
+
+    padding:40px 0;
+
+    background:#fff;
+}
+.flash-sale-card{
+
+    background:
+    linear-gradient(
+        135deg,
+        #FF6B35,
+        #FF8A5C
+    );
+
+    color:#fff;
+
+    padding:4rem;
+
+    border-radius:40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:3rem;
+
+    position:relative;
+
+    overflow:hidden;
+}
+.flash-sale-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+
+    height:400px;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,255,255,.08);
+
+    top:-150px;
+
+    right:-100px;
+}
+.flash-content h2{
+
+    font-size:3rem;
+
+    margin:1rem 0;
+}
+.flash-content p{
+
+    max-width:500px;
+
+    margin-bottom:2rem;
+
+    opacity:.95;
+}
+.flash-badge{
+
+    display:inline-block;
+
+    padding:.8rem 1.2rem;
+
+    border-radius:50px;
+
+    background:
+    rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    font-weight:600;
+}
+.countdown{
+
+    display:flex;
+
+    gap:1rem;
+}
+.time-box{
+
+    width:120px;
+
+    height:120px;
+
+    background:
+    rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:24px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.time-box span{
+
+    font-size:2.5rem;
+
+    font-weight:800;
+}
+
+.time-box small{
+
+    margin-top:.5rem;
+
+    opacity:.9;
+}
+
+@media(max-width:992px){
+
+    .flash-sale-card{
+
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+    .countdown{
+
+        justify-content:center;
+    }
+
+}
+@media(max-width:768px){
+
+    .flash-sale-card{
+
+        padding:2rem;
+    }
+
+    .flash-content h2{
+
+        font-size:2.2rem;
+    }
+
+    .time-box{
+
+        width:90px;
+        height:90px;
+    }
+
+    .time-box span{
+
+        font-size:1.8rem;
+    }
+
+}
+
+.flash-sale .btn-primary{
+
+    background:#fff;
+
+    color:var(--primary);
+
+    padding:1rem 2rem;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.6rem;
+
+    transition:.3s ease;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.12);
+}
+
+.flash-sale .btn-primary:hover::before{
+
+    left:120%;
+}
+
+/* ======================
+   PAYMENT OFFERS
+====================== */
+
+.payment-offers{
+
+    padding:40px 0;
+
+    background:
+    linear-gradient(
+        180deg,
+        #fff,
+        #fff8f3
+    );
+}
+
+.payment-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:2rem;
+
+    margin-top:4rem;
+}
+.payment-card{
+
+    background:#fff;
+
+    padding:2rem;
+
+    border-radius:28px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.05);
+
+    transition:.35s ease;
+
+    position:relative;
+
+    overflow:hidden;
+}
+.payment-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 25px 50px rgba(255,107,53,.12);
+}
+.payment-icon{
+
+    width:80px;
+
+    height:80px;
+
+    margin:0 auto 1.5rem;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #FFF4ED,
+        #FFE7D6
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:2rem;
+}
+.payment-card h3{
+
+    margin-bottom:.8rem;
+
+    color:var(--secondary);
+}
+.payment-card h4{
+
+    color:var(--primary);
+
+    margin-bottom:.8rem;
+
+    font-size:1.4rem;
+}
+.payment-card p{
+
+    color:var(--text-light);
+}
+.payment-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:28px;
+
+    border:1px solid transparent;
+
+    transition:.3s ease;
+}
+.payment-card:hover::before{
+
+    border-color:
+    rgba(255,107,53,.25);
+}
+@media(max-width:992px){
+
+    .payment-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+}
+@media(max-width:768px){
+
+    .payment-grid{
+
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* ======================
+   FAQ SECTION
+====================== */
+
+.faq-section{
+
+    padding:40px 0;
+
+    background:#fff;
+}
+.faq-wrapper{
+
+    max-width:900px;
+
+    margin:4rem auto 0;
+}
+.faq-item{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    margin-bottom:1.2rem;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.05);
+
+    border:1px solid
+    rgba(255,107,53,.08);
+
+    transition:.3s ease;
+}
+.faq-item:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 20px 40px rgba(255,107,53,.08);
+}
+.faq-question{
+
+    width:100%;
+
+    border:none;
+
+    background:none;
+
+    padding:1.5rem 2rem;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-size:1.05rem;
+
+    font-weight:600;
+
+    color:var(--secondary);
+
+    text-align:left;
+}
+.faq-question i{
+
+    color:var(--primary);
+
+    transition:.3s ease;
+}
+.faq-answer{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .35s ease;
+}
+.faq-answer p{
+
+    padding:0 2rem 2rem;
+
+    color:var(--text-light);
+
+    line-height:1.8;
+}
+.faq-item.active .faq-answer{
+
+    max-height:200px;
+}
+.faq-item.active .faq-question i{
+
+    transform:rotate(45deg);
+}
+
+.faq-item.active{
+
+    border-color:
+    rgba(255,107,53,.2);
+
+    box-shadow:
+    0 20px 40px rgba(255,107,53,.12);
+}

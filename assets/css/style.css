@@ -105,3 +105,17 @@
     box-shadow:
     0 12px 30px rgba(255,107,53,.15);
 }
+.btn-primary{
+
+    background:var(--primary);
+
+    color:#fff;
+}
+.btn-secondary{
+
+    background:#fff;
+
+    color:var(--secondary);
+
+    border:1px solid var(--border);
+}

@@ -33,3 +33,32 @@ overlay.addEventListener('click', () => {
     overlay.classList.remove('active');
 
 });
+
+const currentPage =
+window.location.pathname
+.split("/")
+.pop() || "index.html";
+
+const navLinks =
+document.querySelectorAll(
+".nav-link"
+);
+
+navLinks.forEach(link => {
+
+    link.classList.remove(
+    "active"
+    );
+
+    const href =
+    link.getAttribute("href");
+
+    if(href === currentPage){
+
+        link.classList.add(
+        "active"
+        );
+
+    }
+
+});

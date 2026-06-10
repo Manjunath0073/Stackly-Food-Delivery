@@ -645,3 +645,8 @@
         box-sizing:border-box;
     }
 }
+
+.nav-link.active::after{
+
+    width:100%;
+}

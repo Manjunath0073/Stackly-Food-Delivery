@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Delivery</title>
+    <link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet"
+        href="assets/css/style.css">
+
+    <link rel="stylesheet"
+        href="assets/css/header.css">
+    <link rel="stylesheet"
+        href="assets/css/restaurant-dash.css">
+</head>
+
+<body>
+    <div class="sidebar-overlay"></div>
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+
+            <a href="index.html" class="logo sidebar-logo">
+                <img src="assets/images/logo-stackly.webp" alt="StacklyBite Logo">
+            </a>
+
+            <ul class="sidebar-menu">
+
+                <li class="menu-item active"
+                    data-page="dashboard">
+
+                    Dashboard
+
+                </li>
+
+                <li class="menu-item"
+                    data-page="orders">
+
+                    Orders
+
+                </li>
+
+                <li class="menu-item"
+                    data-page="menu">
+
+                    Menu Management
+
+                </li>
+
+                <li class="menu-item"
+                    data-page="analytics">
+
+                    Analytics
+
+                </li>
+
+                <li class="menu-item"
+                    data-page="settings">
+
+                    Settings
+
+                </li>
+
+            </ul>
+
+            <button id="logoutBtn" onclick="">
+
+                Logout
+
+            </button>
+
+        </aside>
+
+        <!-- Main -->
+
+        <main class="dashboard-main">
+
+            <header class="dashboard-header">
+
+                <div class="header-left">
+
+                    <button class="menu-toggle">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+                    <div>
+
+                        <h2>
+
+                            Welcome,
+
+                            <span id="userName"></span>
+
+                            <h4 id="userRole"></h4>
+
+                        </h2>
+
+                        <p>
+
+                            Restaurant Dashboard
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="profile-box">
+
+                    <h4 id="userRole"></h4>
+
+                </div>
+
+            </header>
+            <section id="contentArea">
+
+                <div id="dashboardPage"
+                    class="page-content active-page">
+
+                    <div class="dashboard-home content-page">
+
+                        <!-- KPI Cards -->
+
+                        <div class="stats-grid">
+
+                            <div class="stat-card">
+
+                                <div class="stat-icon">
+
+                                    <i class="fa-solid fa-bag-shopping"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h3 class="counter"
+                                        data-target="125">
+
+                                        0
+
+                                    </h3>
+
+                                    <p>Orders Today</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="stat-card">
+
+                                <div class="stat-icon">
+
+                                    <i class="fa-solid fa-truck"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h3 class="counter"
+                                        data-target="18450">
+
+                                        0
+
+                                    </h3>
+
+                                    <p>Revenue Today</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="stat-card">
+
+                                <div class="stat-icon">
+
+                                    <i class="fa-solid fa-circle-check"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h3 class="counter"
+                                        data-target="42">
+
+                                        0
+
+                                    </h3>
+
+                                    <p>Menu Items</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="stat-card">
+
+                                <div class="stat-icon">
+
+                                    <i class="fa-solid fa-gift"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h3>4.8★</h3>
+                                        <p>Customer Rating</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Chart + Activity -->
+
+                        <div class="dashboard-grid">
+
+                            <div class="chart-card">
+
+                                <div class="card-header">
+
+                                    <h3>
+
+                                        Orders Overview
+
+                                    </h3>
+
+                                </div>
+
+                                <div class="chart-wrapper">
+
+                                    <canvas id="revenueChart">
+
+                                    </canvas>
+
+                                </div>
+
+                            </div>
+
+                            <div class="activity-card">
+
+                                <div class="card-header">
+
+                                    <h3>
+
+                                        Recent Activity
+
+                                    </h3>
+
+                                </div>
+
+                                <ul>
+
+                                    <li>🍔 New Order Received #SB1101</li>
+                                    <li>💰 Payment Settled ₹2,450</li>
+                                    <li>⭐ New 5-Star Review Received</li>
+                                    <li>📦 Order #SB1099 Delivered</li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Recent Orders -->
+
+                        <div class="orders-card">
+
+                            <div class="card-header">
+
+                                <h3>
+
+                                    Recent Orders
+
+                                </h3>
+
+                            </div>
+
+                            <table class="orders-table">
+
+                                <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Status</th>
+                                    <th>Amount</th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>#SB1101</td>
+                                        <td>Madan</td>
+                                        <td>
+                                            <span class="status preparing">
+                                                Preparing
+                                            </span>
+                                        </td>
+                                        <td>₹549</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>#SB1102</td>
+                                        <td>Priya</td>
+                                        <td>
+                                            <span class="status delivered">
+                                                Delivered
+                                            </span>
+                                        </td>
+                                        <td>₹699</td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id="ordersPage"
+                    class="page-content">
+
+                    <div class="orders-summary">
+
+                        <div class="summary-card">
+
+                            <h3>125</h3>
+
+                            <p>Today's Orders</p>
+
+                        </div>
+
+                        <div class="summary-card">
+
+                            <h3>18</h3>
+
+                            <p>Preparing</p>
+
+                        </div>
+
+                        <div class="summary-card">
+
+                            <h3>102</h3>
+
+                            <p>Delivered</p>
+
+                        </div>
+
+                        <div class="summary-card">
+
+                            <h3>5</h3>
+
+                            <p>Cancelled</p>
+
+                        </div>
+
+                    </div>
+                    <div class="orders-filter">
+
+                        <button class="filter-btn active">
+
+                            All Orders
+
+                        </button>
+
+                        <button class="filter-btn">
+
+                            New
+
+                        </button>
+
+                        <button class="filter-btn">
+
+                            Preparing
+
+                        </button>
+
+                        <button class="filter-btn">
+
+                            Delivered
+
+                        </button>
+
+                    </div>
+                     <div class="restaurant-orders-grid">
+
+                        <div class="restaurant-order-card">
+
+                            <div class="order-header">
+
+                                <h3>
+
+                                    #SB1101
+
+                                </h3>
+
+                                <span class="status preparing">
+
+                                    Preparing
+
+                                </span>
+
+                            </div>
+
+                            <h4>
+
+                                Madan Kumar
+
+                            </h4>
+
+                            <p>
+
+                                2x Cheese Burger,
+                                1x French Fries
+
+                            </p>
+
+                            <div class="order-info">
+
+                                <span>
+
+                                    ₹549
+
+                                </span>
+
+                                <span>
+
+                                    12:45 PM
+
+                                </span>
+
+                            </div>
+
+                            <div class="order-buttons">
+
+                                <button class="accept-btn">
+
+                                    Accept
+
+                                </button>
+
+                                <button class="reject-btn">
+
+                                    Reject
+
+                                </button>
+
+                            </div>
+
+                        </div>
+                        <div class="restaurant-order-card">
+
+                            <div class="order-header">
+
+                                <h3>#SB1107</h3>
+
+                                <span class="status preparing">
+
+                                    Preparing
+
+                                </span>
+
+                            </div>
+
+                            <h4>Rahul Sharma</h4>
+
+                            <p>
+
+                                1x Chicken Burger,
+                                2x Coke
+
+                            </p>
+
+                            <div class="order-info">
+
+                                <span>₹425</span>
+
+                                <span>01:15 PM</span>
+
+                            </div>
+
+                            <div class="order-buttons">
+
+                                <button class="accept-btn">
+
+                                    Accept
+
+                                </button>
+
+                                <button class="reject-btn">
+
+                                    Reject
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="restaurant-order-card">
+
+                            <div class="order-header">
+
+                                <h3>#SB1108</h3>
+
+                                <span class="status delivered">
+
+                                    Delivered
+
+                                </span>
+
+                            </div>
+
+                            <h4>Sneha Patel</h4>
+
+                            <p>
+
+                                2x Veg Pizza,
+                                1x Garlic Bread
+
+                            </p>
+
+                            <div class="order-info">
+
+                                <span>₹799</span>
+
+                                <span>01:30 PM</span>
+
+                            </div>
+
+                            <div class="order-buttons">
+
+                                <button class="accept-btn">
+
+                                    View
+
+                                </button>
+
+                                <button class="reject-btn">
+
+                                    Invoice
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="restaurant-order-card">
+
+                            <div class="order-header">
+
+                                <h3>#SB1109</h3>
+
+                                <span class="status preparing">
+
+                                    Preparing
+
+                                </span>
+
+                            </div>
+
+                            <h4>Arjun Kumar</h4>
+
+                            <p>
+
+                                1x BBQ Burger,
+                                1x Fries
+
+                            </p>
+
+                            <div class="order-info">
+
+                                <span>₹499</span>
+
+                                <span>01:42 PM</span>
+
+                            </div>
+
+                            <div class="order-buttons">
+
+                                <button class="accept-btn">
+
+                                    Accept
+
+                                </button>
+
+                                <button class="reject-btn">
+
+                                    Reject
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="restaurant-order-card">
+
+                            <div class="order-header">
+
+                                <h3>#SB1110</h3>
+
+                                <span class="status cancelled">
+
+                                    Cancelled
+
+                                </span>
+
+                            </div>
+
+                            <h4>Priyanka R</h4>
+
+                            <p>
+
+                                3x Cheese Burger
+
+                            </p>
+
+                            <div class="order-info">
+
+                                <span>₹597</span>
+
+                                <span>02:05 PM</span>
+
+                            </div>
+
+                            <div class="order-buttons">
+
+                                <button class="accept-btn">
+
+                                    Details
+
+                                </button>
+
+                                <button class="reject-btn">
+
+                                    Remove
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="restaurant-order-card">
+
+                            <div class="order-header">
+
+                                <h3>#SB1111</h3>
+
+                                <span class="status delivered">
+
+                                    Delivered
+
+                                </span>
+
+                            </div>
+
+                            <h4>Deepak S</h4>
+
+                            <p>
+
+                                1x Family Pizza Combo
+
+                            </p>
+
+                            <div class="order-info">
+
+                                <span>₹999</span>
+
+                                <span>02:20 PM</span>
+
+                            </div>
+
+                            <div class="order-buttons">
+
+                                <button class="accept-btn">
+
+                                    View
+
+                                </button>
+
+                                <button class="reject-btn">
+
+                                    Invoice
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="restaurant-order-card">
+
+                            <div class="order-header">
+
+                                <h3>#SB1112</h3>
+
+                                <span class="status preparing">
+
+                                    Preparing
+
+                                </span>
+
+                            </div>
+
+                            <h4>Kavya Nair</h4>
+
+                            <p>
+
+                                2x Veg Burger,
+                                1x Brownie
+
+                            </p>
+
+                            <div class="order-info">
+
+                                <span>₹455</span>
+
+                                <span>02:35 PM</span>
+
+                            </div>
+
+                            <div class="order-buttons">
+
+                                <button class="accept-btn">
+
+                                    Accept
+
+                                </button>
+
+                                <button class="reject-btn">
+
+                                    Reject
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>                   
+                    
+
+                </div>
+
+                <div id="menuPage"
+                    class="page-content">
+                    <div class="menu-summary">
+
+                        <div class="summary-card">
+
+                            <h3>42</h3>
+
+                            <p>Total Items</p>
+
+                        </div>
+
+                        <div class="summary-card">
+
+                            <h3>18</h3>
+
+                            <p>Best Sellers</p>
+
+                        </div>
+
+                        <div class="summary-card">
+
+                            <h3>4</h3>
+
+                            <p>Out Of Stock</p>
+
+                        </div>
+
+                        <div class="summary-card">
+
+                            <h3>₹12,500</h3>
+
+                            <p>Today's Revenue</p>
+
+                        </div>
+
+                    </div>
+                    <div class="menu-toolbar">
+
+                        <input
+                            type="text"
+                            placeholder="Search Menu Item">
+
+                        <button class="add-item-btn">
+
+                            + Add New Item
+
+                        </button>
+
+                    </div>
+                    <div class="menu-grid">
+                        <div class="food-card">
+
+                            <img
+                                src="assets/images/burger.jpg"
+                                alt="Burger">
+
+                            <div class="food-content">
+
+                                <h3>
+
+                                    Classic Burger
+
+                                </h3>
+
+                                <p>
+
+                                    Juicy grilled burger with cheese.
+
+                                </p>
+
+                                <div class="food-meta">
+
+                                    <span>₹199</span>
+
+                                    <span class="food-status">
+
+                                        Active
+
+                                    </span>
+
+                                </div>
+
+                                <div class="food-actions">
+
+                                    <button class="edit-btn">
+
+                                        Edit
+
+                                    </button>
+
+                                    <button class="delete-btn">
+
+                                        Delete
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="food-card">
+
+                            <img src="assets/images/chicken-burger.jpg"
+                                alt="Chicken Burger">
+
+                            <div class="food-content">
+
+                                <h3>Chicken Burger</h3>
+
+                                <p>
+                                    Grilled chicken fillet with signature sauce.
+                                </p>
+
+                                <div class="food-meta">
+
+                                    <span>₹299</span>
+
+                                    <span class="food-status">
+                                        Active
+                                    </span>
+
+                                </div>
+
+                                <div class="food-actions">
+
+                                    <button class="edit-btn">Edit</button>
+
+                                    <button class="delete-btn">Delete</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="food-card">
+
+                            <img src="assets/images/farmhouse-pizza.jpg"
+                                alt="Farmhouse Pizza">
+
+                            <div class="food-content">
+
+                                <h3>Farmhouse Pizza</h3>
+
+                                <p>
+                                    Fresh vegetables topped with mozzarella cheese.
+                                </p>
+
+                                <div class="food-meta">
+
+                                    <span>₹399</span>
+
+                                    <span class="food-status">
+                                        Active
+                                    </span>
+
+                                </div>
+
+                                <div class="food-actions">
+
+                                    <button class="edit-btn">Edit</button>
+
+                                    <button class="delete-btn">Delete</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="food-card">
+
+                            <img src="assets/images/pepperoni-pizza.jpg"
+                                alt="Pepperoni Pizza">
+
+                            <div class="food-content">
+
+                                <h3>Pepperoni Pizza</h3>
+
+                                <p>
+                                    Loaded with pepperoni slices and cheese.
+                                </p>
+
+                                <div class="food-meta">
+
+                                    <span>₹499</span>
+
+                                    <span class="food-status">
+                                        Active
+                                    </span>
+
+                                </div>
+
+                                <div class="food-actions">
+
+                                    <button class="edit-btn">Edit</button>
+
+                                    <button class="delete-btn">Delete</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="analyticsPage"
+                    class="page-content">
+<div class="analytics-summary">
+
+    <div class="summary-card">
+
+        <h3>₹1.25L</h3>
+
+        <p>Monthly Revenue</p>
+
+    </div>
+
+    <div class="summary-card">
+
+        <h3>842</h3>
+
+        <p>Total Orders</p>
+
+    </div>
+
+    <div class="summary-card">
+
+        <h3>₹148</h3>
+
+        <p>Avg Order Value</p>
+
+    </div>
+
+    <div class="summary-card">
+
+        <h3>4.8★</h3>
+
+        <p>Customer Rating</p>
+
+    </div>
+
+</div>
+<div class="analytics-chart-card">
+
+    <div class="card-header">
+
+        <h3>
+
+            Monthly Revenue Trend
+
+        </h3>
+
+    </div>
+
+    <div class="chart-wrapper">
+
+        <canvas id="analyticsChart">
+
+        </canvas>
+
+    </div>
+
+</div>
+
+                </div>
+
+                <div id="settingsPage"
+                    class="page-content">
+
+                    <div class="settings-card">
+
+                        <h3>
+
+                            Profile Information
+
+                        </h3>
+
+                        <div class="settings-grid">
+
+                            <div class="form-group">
+
+                                <label>
+
+                                    Full Name
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    value="Madan Kumar">
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>
+
+                                    Email
+
+                                </label>
+
+                                <input
+                                    type="email"
+                                    value="madan@gmail.com">
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>
+
+                                    Phone
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    value="+91 9876543210">
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>
+
+                                    Role
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    value="Customer"
+                                    disabled>
+
+                            </div>
+
+                        </div>
+
+                        <button class="btn btn-primary">
+
+                            Save Changes
+
+                        </button>
+
+                    </div>
+                    <div class="settings-card">
+
+                        <h3>
+
+                            Account Security
+
+                        </h3>
+
+                        <div class="settings-grid">
+
+                            <div class="form-group">
+
+                                <label>
+
+                                    New Password
+
+                                </label>
+
+                                <input
+                                    type="password"
+                                    placeholder="Enter New Password">
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>
+
+                                    Confirm Password
+
+                                </label>
+
+                                <input
+                                    type="password"
+                                    placeholder="Confirm Password">
+
+                            </div>
+
+                        </div>
+
+                        <button class="btn btn-primary">
+
+                            Update Password
+
+                        </button>
+
+                    </div>
+                    <div class="settings-card">
+
+                        <h3>
+
+                            Notification Preferences
+
+                        </h3>
+
+                        <div class="setting-item">
+
+                            <span>
+
+                                Order Updates
+
+                            </span>
+
+                            <label class="switch">
+
+                                <input type="checkbox" checked>
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+                        <div class="setting-item">
+
+                            <span>
+
+                                Promotional Offers
+
+                            </span>
+
+                            <label class="switch">
+
+                                <input type="checkbox" checked>
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+                        <div class="setting-item">
+
+                            <span>
+
+                                SMS Notifications
+
+                            </span>
+
+                            <label class="switch">
+
+                                <input type="checkbox">
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+                    <div class="settings-card">
+
+                        <h3>
+
+                            Appearance
+
+                        </h3>
+
+                        <div class="setting-item">
+
+                            <span>
+
+                                Dark Mode
+
+                            </span>
+
+                            <label class="switch">
+
+                                <input type="checkbox">
+
+                                <span class="slider"></span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+                    <div class="danger-card">
+
+                        <h3>
+
+                            Danger Zone
+
+                        </h3>
+
+                        <p>
+
+                            Permanently delete your account and all associated data.
+
+                        </p>
+
+                        <button class="delete-btn">
+
+                            Delete Account
+
+                        </button>
+
+                    </div>
+                </div>
+
+            </section>
+
+
+
+        </main>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/res-dashboard.js"></script>
+    
+</body>
+</html>
