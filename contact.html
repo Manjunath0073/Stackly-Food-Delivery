@@ -255,7 +255,9 @@
                     <input
                         type="text"
                         id="name"
-                        placeholder="Your Name"
+                        placeholder="Enter Full Name"
+                        pattern="^[A-Za-z ]+$"
+                        title="Only alphabets and spaces are allowed"
                         required>
 
                     <input
@@ -274,6 +276,7 @@
                         rows="6"
                         id="message"
                         placeholder="Your Message"
+                        minlength="10"
                         required></textarea>
 
                   

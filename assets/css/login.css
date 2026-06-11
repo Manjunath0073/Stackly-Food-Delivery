@@ -228,7 +228,7 @@
     margin-bottom:.3rem;
 }
 .remember-row{
-
+    margin-top: 10px;
     display:flex;
 
     justify-content:space-between;
@@ -291,7 +291,16 @@
 
     box-sizing:border-box;
 }
+@media(max-width:420px){
+    .remember-row{
+        margin-top: 10px;
+        flex-direction:column;
 
+        align-items:flex-start;
+
+        gap:.8rem;
+    }
+}
 @media(max-width:375px){
 
     .auth-section{
@@ -331,7 +340,7 @@
     }
 
     .remember-row{
-
+        margin-top: 10px;
         flex-direction:column;
 
         align-items:flex-start;
