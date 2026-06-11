@@ -25,6 +25,26 @@
     position:relative;
 }
 
+html,
+body{
+
+    overflow-x:hidden;
+}
+
+.hero__badge{
+
+    max-width:100%;
+
+    width:auto;
+}
+
+.hero__search{
+
+    width:100%;
+
+    max-width:100%;
+}
+
 .hero__container{
 
     display:grid;
@@ -64,6 +84,24 @@
     font-weight:700;
 
     color:var(--primary);
+}
+@media(max-width:375px){
+
+    .hero__badge{
+
+        width:100%;
+
+        max-width:100%;
+
+        justify-content:center;
+
+        text-align:center;
+
+        font-size:.8rem;
+
+        padding:.8rem;
+    }
+
 }
 .hero__title{
 
@@ -199,6 +237,12 @@
     color:var(--text-light);
 
     line-height:1.8;
+}
+.hero__trust strong{
+
+    word-break:break-word;
+
+    overflow-wrap:break-word;
 }
 .hero__visual{
 
@@ -612,7 +656,160 @@
 
     color:var(--primary);
 }
+/* ======================
+   EXTRA SMALL DEVICES
+====================== */
 
+@media(max-width:375px){
+
+    .hero{
+
+        min-height:auto;
+
+        padding-top:100px;
+
+        padding-bottom:60px;
+    }
+
+    .hero__container{
+
+        gap:2rem;
+    }
+
+    .hero__visual{
+
+        height:260px;
+
+        overflow:visible;
+        margin-top: -30px;
+    }
+
+    .food-orbit{
+
+        width:240px;
+        height:240px;
+    }
+
+    .orbit-1{
+
+        width:180px;
+        height:180px;
+    }
+
+    .orbit-2{
+
+        width:240px;
+        height:240px;
+    }
+
+    .food{
+
+        width:60px;
+        height:60px;
+
+        margin:-30px;
+    }
+
+    .food--1{
+        transform:rotate(0deg) translateY(-80px);
+    }
+
+    .food--2{
+        transform:rotate(72deg) translateY(-80px);
+    }
+
+    .food--3{
+        transform:rotate(144deg) translateY(-80px);
+    }
+
+    .food--4{
+        transform:rotate(216deg) translateY(-80px);
+    }
+
+    .food--5{
+        transform:rotate(288deg) translateY(-80px);
+    }
+
+    .hero__center-logo{
+
+        width:85px;
+        height:85px;
+    }
+
+    .hero__center-logo h3{
+
+        font-size:.85rem;
+    }
+
+    .center-logo-icon{
+
+        width:26px;
+        height:26px;
+    }
+
+    .center-logo-icon i{
+
+        font-size:.7rem;
+    }
+
+    .hero__title{
+
+        font-size:2rem;
+    }
+
+    .hero__description{
+
+        font-size:.95rem;
+    }
+
+}
+@media(max-width:320px){
+
+    .hero__visual{
+
+        height:280px;
+    }
+
+    .food{
+
+        width:60px;
+        height:60px;
+
+        margin:-30px;
+    }
+
+    .food--1{
+        transform:rotate(0deg) translateY(-90px);
+    }
+
+    .food--2{
+        transform:rotate(72deg) translateY(-90px);
+    }
+
+    .food--3{
+        transform:rotate(144deg) translateY(-90px);
+    }
+
+    .food--4{
+        transform:rotate(216deg) translateY(-90px);
+    }
+
+    .food--5{
+        transform:rotate(288deg) translateY(-90px);
+    }
+
+    .hero__center-logo{
+
+        width:90px;
+        height:90px;
+    }
+
+    .hero__center-logo h3{
+
+        font-size:.9rem;
+    }
+
+}
 /* ======================
    FEATURES
 ====================== */

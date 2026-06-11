@@ -175,6 +175,91 @@
     }
 
 }
+@media(max-width:375px){
+
+    .restaurant-hero{
+
+        padding:100px 0 50px;
+    }
+
+    .restaurant-hero h1{
+
+        font-size:2rem;
+
+        line-height:1.2;
+    }
+
+    .restaurant-hero p{
+
+        font-size:.95rem;
+
+        padding:0 10px;
+    }
+
+    .restaurant-search{
+
+        width:100%;
+
+        max-width:100%;
+
+        box-sizing:border-box;
+    }
+
+    .restaurant-search input{
+
+        width:100%;
+
+        min-width:0;
+
+        padding:.9rem 1rem;
+    }
+
+    .restaurant-search button{
+
+        width:100%;
+
+        padding:.9rem;
+    }
+
+    .restaurant-stats{
+
+        gap:1rem;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+    .restaurant-stat{
+
+        min-width:80px;
+    }
+
+    .restaurant-stat h3{
+
+        font-size:1.5rem;
+    }
+
+}
+@media(max-width:320px){
+
+    .restaurant-hero h1{
+
+        font-size:1.8rem;
+    }
+
+    .restaurant-search input{
+
+        font-size:.85rem;
+    }
+
+    .restaurant-stat h3{
+
+        font-size:1.3rem;
+    }
+
+}
+
 .featured-restaurant{
 
     background:#fff;
@@ -500,7 +585,7 @@
 
 .featured-restaurants{
 
-    padding:100px 0;
+    padding:40px 0;
 
     background:#fff;
 }
@@ -696,7 +781,7 @@
 
 .popular-locations{
 
-    padding:100px 0;
+    padding:40px 0;
 
     background:
     linear-gradient(
@@ -802,7 +887,7 @@
 
     margin-left:auto;
 
-    padding:.5rem 1rem;
+    padding:rem 1rem;
 
     border-radius:50px;
 
@@ -819,7 +904,7 @@
 
 .restaurant-benefits{
 
-    padding:100px 0;
+    padding:40px 0;
 
     background:#fff;
 }

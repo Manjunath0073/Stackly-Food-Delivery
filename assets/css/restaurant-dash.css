@@ -1524,3 +1524,74 @@
     }
 
 }
+
+*,
+*::before,
+*::after{
+
+    box-sizing:border-box;
+}
+
+.dashboard-main,
+#contentArea,
+.page-content{
+
+    width:100%;
+
+    max-width:100%;
+
+    min-width:0;
+}
+
+.restaurant-orders-grid,
+.menu-grid,
+.analytics-summary,
+.menu-summary,
+.stats-grid{
+
+    width:100%;
+
+    max-width:100%;
+}
+
+@media(max-width:375px){
+
+    .dashboard-main{
+
+        padding:8px;
+    }
+
+    .dashboard-header{
+
+        padding:14px;
+    }
+
+    .header-left{
+
+        flex-wrap:wrap;
+    }
+
+    .profile-box{
+
+        width:100%;
+
+        max-width:100%;
+
+        text-align:center;
+    }
+
+    .restaurant-order-card,
+    .food-card,
+    .summary-card,
+    .analytics-card,
+    .analytics-chart-card,
+    .stat-card{
+
+        width:100%;
+
+        max-width:100%;
+
+        min-width:0;
+    }
+
+}

@@ -347,3 +347,54 @@
 
     border:1px solid #FECACA;
 }
+.contact-form input,
+.contact-form textarea{
+
+    box-sizing:border-box;
+}
+.contact-badge{
+
+    display:inline-flex;
+}
+@media(max-width:375px){
+
+    .contact-badge{
+
+        max-width:100%;
+
+        text-align:center;
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+        font-size:.85rem;
+    }
+
+}
+@media(max-width:375px){
+
+    .contact-hero h1{
+
+        font-size:2.2rem;
+
+        word-break:break-word;
+    }
+
+}
+
+@media(max-width:375px){
+
+    .info-card{
+
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+}
+html,
+body{
+
+    overflow-x:hidden;
+}

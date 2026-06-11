@@ -132,6 +132,10 @@
     flex:1;
 
     padding:2rem;
+
+    min-width:0;
+
+    overflow-x:hidden;
 }
 .dashboard-header{
 
@@ -226,11 +230,19 @@
         translateX(0);
     }
 
+}
+
+@media(max-width:992px){
+
     .dashboard-main{
 
         width:100%;
 
-        padding:1rem;
+        padding:12px;
+
+        box-sizing:border-box;
+
+        overflow-x:hidden;
     }
 
     .menu-toggle{
@@ -242,6 +254,7 @@
         justify-content:center;
     }
 }
+
 .profile-box{
     min-width: 70px;
     text-align: center;
@@ -415,6 +428,11 @@
     gap:1.5rem;
 
     margin-bottom:2rem;
+}
+
+.stats-grid > *{
+
+    min-width:0;
 }
 .stat-card{
 
@@ -1139,3 +1157,352 @@
 
 }
 
+/* ======================
+   320px MOBILE FIXES
+====================== */
+
+html,
+body{
+
+    overflow-x:hidden;
+}
+
+@media(max-width:375px){
+
+    .dashboard-header{
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:12px;
+
+        padding:16px;
+    }
+
+    .header-left{
+
+        display:flex;
+
+        align-items:center;
+
+        gap:12px;
+
+        width:100%;
+
+        min-width:0;
+    }
+
+    .profile-box{
+
+        width:100%;
+
+        box-sizing:border-box;
+
+        text-align:center;
+
+        min-width:0;
+    }
+
+}
+.dashboard-header,
+.header-left,
+.profile-box{
+
+    min-width:0;
+}
+
+@media(max-width:375px){
+
+    .stat-card{
+
+        padding:1rem;
+
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+}
+
+.orders-card{
+
+    overflow-x:auto;
+}
+
+.orders-table{
+
+    min-width:450px;
+}
+
+@media(max-width:375px){
+
+    .order-actions{
+
+        flex-direction:column;
+    }
+
+    .order-meta{
+
+        flex-direction:column;
+
+        gap:.5rem;
+    }
+
+}
+
+@media(max-width:375px){
+
+    .rewards-hero{
+
+        padding:1.5rem;
+    }
+
+    .rewards-hero h1{
+
+        font-size:2rem;
+    }
+
+    .tier-badge{
+
+        width:100%;
+
+        text-align:center;
+    }
+
+}
+@media(max-width:375px){
+
+    .settings-card{
+
+        padding:1rem;
+    }
+
+    .setting-item{
+
+        gap:1rem;
+    }
+
+}
+
+.dashboard-main{
+
+    min-width:0;
+}
+
+#userName{
+
+    display:block;
+
+    word-break:break-all;
+}
+
+
+.menu-toggle{
+
+    position:relative;
+
+    z-index:10;
+}
+
+
+
+
+*{
+
+    box-sizing:border-box;
+}
+
+@media(max-width:375px){
+
+    .dashboard-main{
+
+        padding:10px;
+    }
+
+    .dashboard-header{
+
+        padding:14px;
+    }
+
+    .profile-box{
+
+        width:100%;
+
+        max-width:100%;
+    }
+
+}
+
+@media(max-width:375px){
+
+    .dashboard-main{
+
+        padding:8px;
+    }
+
+    #contentArea{
+
+        width:100%;
+
+        max-width:100%;
+
+        overflow:hidden;
+    }
+
+    .content-page{
+
+        width:100%;
+
+        max-width:100%;
+
+        overflow:hidden;
+    }
+
+    .dashboard-home{
+
+        width:100%;
+
+        max-width:100%;
+    }
+
+    .stats-grid{
+
+        width:100%;
+
+        grid-template-columns:1fr;
+
+        gap:1rem;
+    }
+
+    .stat-card{
+
+        width:100%;
+
+        max-width:100%;
+
+        min-width:0;
+    }
+
+}
+
+#contentArea,
+.page-content,
+.dashboard-home{
+
+    width:100%;
+
+    max-width:100%;
+
+    min-width:0;
+}
+
+.dashboard-layout{
+
+    overflow-x:hidden;
+}
+
+.dashboard-main{
+
+    overflow-x:hidden;
+}
+
+#contentArea{
+
+    overflow-x:hidden;
+}
+
+@media(max-width:375px){
+
+    .header-left{
+
+        flex-wrap:wrap;
+    }
+
+    .stats-grid{
+
+        width:100%;
+    }
+
+    .stat-card{
+
+        min-width:0;
+    }
+
+}
+
+#contentArea{
+
+    width:100%;
+
+    max-width:100%;
+
+    min-width:0;
+}
+
+.page-content{
+
+    width:100%;
+
+    max-width:100%;
+
+    min-width:0;
+}
+
+.dashboard-home{
+
+    width:100%;
+
+    max-width:100%;
+
+    min-width:0;
+}
+@media(max-width:375px){
+
+    .dashboard-main{
+
+        padding:8px;
+    }
+
+    .dashboard-header,
+    .stats-grid,
+    .dashboard-grid,
+    .orders-card{
+
+        width:100%;
+
+        max-width:100%;
+    }
+
+}
+
+#contentArea > *{
+
+    width:100%;
+
+    max-width:100%;
+
+    min-width:0;
+}
+
+.page-content{
+
+    width:100% !important;
+
+    max-width:100% !important;
+
+    min-width:0 !important;
+
+    overflow:hidden;
+}
+
+.dashboard-home{
+
+    width:100% !important;
+
+    max-width:100% !important;
+
+    min-width:0 !important;
+}
